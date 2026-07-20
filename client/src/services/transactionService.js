@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/transactions";
+const API = `${import.meta.env.VITE_API_URL}/transactions`;
 
 export const transferFunds = async (transferData) => {
   return await axios.post(`${API}/transfer`, transferData);

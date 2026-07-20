@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/user";
+const API = `${import.meta.env.VITE_API_URL}/user`;
 
 export const getProfile = async (userId) => {
   return await axios.get(`${API}/profile/${userId}`);
